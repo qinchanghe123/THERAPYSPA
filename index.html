@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THERAPYSPA | Massage & Wellness in Shelton, CT</title>
+
+  <script
+    id="anywhere_book_now_script"
+    type="text/javascript"
+    src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js">
+  </script>
+
   <style>
     :root{
       --cream:#f7f1e8;
@@ -16,16 +23,34 @@
       --radius:24px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       font-family: Inter, Arial, sans-serif;
       color:var(--dark);
       background:var(--cream);
       line-height:1.65;
     }
-    a{text-decoration:none;color:inherit}
-    img{display:block;width:100%;height:100%;object-fit:cover}
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
 
     header{
       position:fixed;
@@ -41,22 +66,32 @@
       backdrop-filter:blur(12px);
       color:white;
     }
+
     .logo{
       font-family: Georgia, serif;
       font-size:1.55rem;
       letter-spacing:.12em;
       font-weight:700;
     }
+
     nav{
       display:flex;
       gap:24px;
       font-size:.92rem;
       letter-spacing:.04em;
     }
-    nav a{opacity:.9}
-    nav a:hover{opacity:1;color:#f4d2a5}
 
-    .btn{
+    nav a{
+      opacity:.9;
+    }
+
+    nav a:hover{
+      opacity:1;
+      color:#f4d2a5;
+    }
+
+    .btn,
+    .setmore-book-btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -70,13 +105,26 @@
       box-shadow:0 14px 30px rgba(80,49,25,.28);
       cursor:pointer;
       transition:.25s ease;
+      font-size:14px;
+      font-family:inherit;
     }
-    .btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(80,49,25,.36)}
+
+    .btn:hover,
+    .setmore-book-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(80,49,25,.36);
+    }
+
     .btn.secondary{
       background:white;
       color:var(--brown);
       box-shadow:none;
       border:1px solid rgba(92,68,52,.18);
+    }
+
+    .header-book{
+      padding:12px 22px;
+      font-size:13px;
     }
 
     .hero{
@@ -88,16 +136,30 @@
       color:white;
       overflow:hidden;
     }
+
     .hero-slide{
       position:absolute;
       inset:0;
       opacity:0;
       animation:heroFade 24s infinite;
     }
-    .hero-slide:nth-child(1){animation-delay:0s}
-    .hero-slide:nth-child(2){animation-delay:6s}
-    .hero-slide:nth-child(3){animation-delay:12s}
-    .hero-slide:nth-child(4){animation-delay:18s}
+
+    .hero-slide:nth-child(1){
+      animation-delay:0s;
+    }
+
+    .hero-slide:nth-child(2){
+      animation-delay:6s;
+    }
+
+    .hero-slide:nth-child(3){
+      animation-delay:12s;
+    }
+
+    .hero-slide:nth-child(4){
+      animation-delay:18s;
+    }
+
     .hero::after{
       content:"";
       position:absolute;
@@ -106,16 +168,25 @@
         linear-gradient(90deg,rgba(23,15,10,.72),rgba(23,15,10,.34)),
         radial-gradient(circle at center,rgba(255,255,255,.04),rgba(0,0,0,.45));
     }
+
     @keyframes heroFade{
-      0%,22%{opacity:1;transform:scale(1.02)}
-      28%,100%{opacity:0;transform:scale(1.08)}
+      0%,22%{
+        opacity:1;
+        transform:scale(1.02);
+      }
+      28%,100%{
+        opacity:0;
+        transform:scale(1.08);
+      }
     }
+
     .hero-content{
       position:relative;
       z-index:2;
       width:min(900px,90%);
       padding-top:70px;
     }
+
     .eyebrow{
       color:#f3d4ac;
       text-transform:uppercase;
@@ -124,12 +195,14 @@
       font-size:.82rem;
       margin-bottom:18px;
     }
+
     .hero h1{
       font-family:Georgia,serif;
       font-size:clamp(3rem,8vw,7rem);
       line-height:.95;
       margin-bottom:24px;
     }
+
     .hero p{
       font-size:clamp(1.05rem,2vw,1.35rem);
       max-width:680px;
@@ -137,12 +210,16 @@
       color:rgba(255,255,255,.9);
     }
 
-    section{padding:100px 6%}
+    section{
+      padding:100px 6%;
+    }
+
     .section-head{
       max-width:820px;
       margin:0 auto 52px;
       text-align:center;
     }
+
     .section-head span{
       color:var(--gold);
       text-transform:uppercase;
@@ -150,17 +227,22 @@
       font-weight:800;
       font-size:.8rem;
     }
+
     .section-head h2{
       font-family:Georgia,serif;
       font-size:clamp(2.2rem,4vw,4rem);
       color:var(--brown);
       margin:10px 0 14px;
     }
-    .section-head p{color:#6f6258}
+
+    .section-head p{
+      color:#6f6258;
+    }
 
     .about{
       background:var(--white);
     }
+
     .about-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -169,18 +251,25 @@
       max-width:1160px;
       margin:auto;
     }
+
     .about-card{
       background:var(--cream);
       border-radius:var(--radius);
       padding:42px;
       box-shadow:var(--shadow);
     }
+
     .about-card h3{
       font-family:Georgia,serif;
       color:var(--brown);
       font-size:2rem;
       margin-bottom:16px;
     }
+
+    .about-card p{
+      color:#6b5b50;
+    }
+
     .about-image{
       height:520px;
       border-radius:var(--radius);
@@ -191,6 +280,7 @@
     .services{
       background:linear-gradient(180deg,var(--cream),#fffaf4);
     }
+
     .service-grid{
       max-width:1200px;
       margin:auto;
@@ -198,6 +288,7 @@
       grid-template-columns:repeat(4,1fr);
       gap:24px;
     }
+
     .service-card{
       background:white;
       border-radius:var(--radius);
@@ -205,12 +296,14 @@
       box-shadow:var(--shadow);
       border:1px solid rgba(92,68,52,.08);
     }
+
     .service-carousel{
       height:250px;
       position:relative;
       overflow:hidden;
       background:#d8c2a3;
     }
+
     .service-carousel img{
       position:absolute;
       inset:0;
@@ -218,11 +311,16 @@
       transition:opacity .8s ease, transform 5s ease;
       transform:scale(1.04);
     }
+
     .service-carousel img.active{
       opacity:1;
       transform:scale(1);
     }
-    .service-body{padding:26px}
+
+    .service-body{
+      padding:26px;
+    }
+
     .service-body h3{
       font-family:Georgia,serif;
       color:var(--brown);
@@ -230,6 +328,7 @@
       line-height:1.15;
       margin-bottom:8px;
     }
+
     .meta{
       display:flex;
       justify-content:space-between;
@@ -238,7 +337,11 @@
       color:var(--gold);
       font-weight:800;
     }
-    .service-body p{font-size:.96rem;color:#6b5b50}
+
+    .service-body p{
+      font-size:.96rem;
+      color:#6b5b50;
+    }
 
     .packages{
       max-width:900px;
@@ -249,12 +352,14 @@
       padding:34px;
       box-shadow:var(--shadow);
     }
+
     .packages h3{
       font-family:Georgia,serif;
       font-size:2rem;
       margin-bottom:18px;
       color:#f7d8ae;
     }
+
     .package-row{
       display:flex;
       justify-content:space-between;
@@ -263,8 +368,15 @@
       border-bottom:1px solid rgba(255,255,255,.14);
       font-size:1.1rem;
     }
-    .package-row:last-child{border-bottom:none}
-    .package-row strong{font-size:1.45rem;color:#f7d8ae}
+
+    .package-row:last-child{
+      border-bottom:none;
+    }
+
+    .package-row strong{
+      font-size:1.45rem;
+      color:#f7d8ae;
+    }
 
     .booking{
       background:
@@ -273,16 +385,19 @@
       color:white;
       text-align:center;
     }
+
     .booking h2{
       font-family:Georgia,serif;
       font-size:clamp(2.3rem,5vw,4.5rem);
       margin-bottom:18px;
     }
+
     .booking p{
       max-width:680px;
       margin:0 auto 28px;
       color:rgba(255,255,255,.86);
     }
+
     .booking-actions{
       display:flex;
       justify-content:center;
@@ -294,14 +409,22 @@
       background:var(--white);
       overflow:hidden;
     }
+
     .review-row{
       display:flex;
       gap:18px;
       margin:18px 0;
       width:max-content;
     }
-    .review-row.left{animation:scrollLeft 42s linear infinite}
-    .review-row.right{animation:scrollRight 46s linear infinite}
+
+    .review-row.left{
+      animation:scrollLeft 42s linear infinite;
+    }
+
+    .review-row.right{
+      animation:scrollRight 46s linear infinite;
+    }
+
     .review{
       width:360px;
       flex:0 0 auto;
@@ -311,22 +434,47 @@
       box-shadow:0 10px 28px rgba(44,31,22,.08);
       border:1px solid rgba(92,68,52,.08);
     }
-    .stars{color:#c28b45;margin-bottom:10px;letter-spacing:.12em}
-    .review p{color:#5f5149;font-size:.95rem}
-    .review strong{display:block;margin-top:14px;color:var(--brown)}
-    @keyframes scrollLeft{
-      from{transform:translateX(0)}
-      to{transform:translateX(-50%)}
+
+    .stars{
+      color:#c28b45;
+      margin-bottom:10px;
+      letter-spacing:.12em;
     }
+
+    .review p{
+      color:#5f5149;
+      font-size:.95rem;
+    }
+
+    .review strong{
+      display:block;
+      margin-top:14px;
+      color:var(--brown);
+    }
+
+    @keyframes scrollLeft{
+      from{
+        transform:translateX(0);
+      }
+      to{
+        transform:translateX(-50%);
+      }
+    }
+
     @keyframes scrollRight{
-      from{transform:translateX(-50%)}
-      to{transform:translateX(0)}
+      from{
+        transform:translateX(-50%);
+      }
+      to{
+        transform:translateX(0);
+      }
     }
 
     .faq{
       max-width:900px;
       margin:auto;
     }
+
     details{
       background:white;
       margin-bottom:14px;
@@ -335,12 +483,14 @@
       box-shadow:0 10px 26px rgba(44,31,22,.08);
       border:1px solid rgba(92,68,52,.08);
     }
+
     summary{
       cursor:pointer;
       font-weight:800;
       color:var(--brown);
       font-size:1.05rem;
     }
+
     details p{
       margin-top:12px;
       color:#6b5b50;
@@ -350,8 +500,15 @@
       background:var(--dark);
       color:white;
     }
-    .contact .section-head h2{color:white}
-    .contact .section-head p{color:rgba(255,255,255,.72)}
+
+    .contact .section-head h2{
+      color:white;
+    }
+
+    .contact .section-head p{
+      color:rgba(255,255,255,.72);
+    }
+
     .contact-grid{
       max-width:1160px;
       margin:auto;
@@ -359,17 +516,23 @@
       grid-template-columns:.85fr 1.15fr;
       gap:28px;
     }
+
     .contact-card{
       background:rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
       border-radius:var(--radius);
       padding:34px;
     }
+
     .contact-item{
       padding:18px 0;
       border-bottom:1px solid rgba(255,255,255,.12);
     }
-    .contact-item:last-child{border-bottom:none}
+
+    .contact-item:last-child{
+      border-bottom:none;
+    }
+
     .contact-item span{
       display:block;
       color:#f7d8ae;
@@ -379,6 +542,7 @@
       text-transform:uppercase;
       font-size:.8rem;
     }
+
     iframe{
       width:100%;
       height:460px;
@@ -396,17 +560,49 @@
     }
 
     @media (max-width:1050px){
-      .service-grid{grid-template-columns:repeat(2,1fr)}
-      .about-grid,.contact-grid{grid-template-columns:1fr}
-      .about-image{height:380px}
+      .service-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .about-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .about-image{
+        height:380px;
+      }
     }
+
     @media (max-width:720px){
-      header{padding:14px 5%}
-      nav{display:none}
-      section{padding:76px 5%}
-      .service-grid{grid-template-columns:1fr}
-      .review{width:300px}
-      .package-row{font-size:1rem}
+      header{
+        padding:14px 5%;
+      }
+
+      nav{
+        display:none;
+      }
+
+      section{
+        padding:76px 5%;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .review{
+        width:300px;
+      }
+
+      .package-row{
+        font-size:1rem;
+      }
+
+      .header-book{
+        padding:10px 16px;
+        font-size:12px;
+      }
     }
   </style>
 </head>
@@ -414,6 +610,7 @@
 <body>
   <header>
     <a href="#home" class="logo">THERAPYSPA</a>
+
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -421,21 +618,45 @@
       <a href="#faq">FAQs</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn" href="#booking">Book Now</a>
+
+    <button
+      id="Anywhere_button_iframe"
+      class="anywhere-book-now-button setmore-book-btn header-book"
+      data-booking-url="https://therapyspa.setmore.com"
+      data-new-tab="false">
+      Book now
+    </button>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-slide"><img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Relaxing massage room"></div>
-      <div class="hero-slide"><img src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg" alt="Calming spa treatment"></div>
-      <div class="hero-slide"><img src="https://i.pinimg.com/1200x/07/13/62/0713626b6e91eb53a1b7b60a3d0dfd8e.jpg" alt="Peaceful massage setting"></div>
-      <div class="hero-slide"><img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Spa relaxation detail"></div>
+      <div class="hero-slide">
+        <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Relaxing massage room">
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg" alt="Calming spa treatment">
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://i.pinimg.com/1200x/07/13/62/0713626b6e91eb53a1b7b60a3d0dfd8e.jpg" alt="Peaceful massage setting">
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Spa relaxation detail">
+      </div>
 
       <div class="hero-content">
         <div class="eyebrow">Massage & Wellness · Shelton, CT</div>
         <h1>Relax deeply. Feel restored.</h1>
         <p>Step into a quiet, private space designed for comfort, calm, and professional therapeutic relaxation.</p>
-        <a href="#booking" class="btn">Book Now</a>
+
+        <button
+          class="anywhere-book-now-button setmore-book-btn"
+          data-booking-url="https://therapyspa.setmore.com"
+          data-new-tab="false">
+          Book now
+        </button>
       </div>
     </section>
 
@@ -459,6 +680,7 @@
             THERAPYSPA offers a soothing setting dedicated to deep comfort and relaxation.
           </p>
         </div>
+
         <div class="about-image">
           <img src="https://i.pinimg.com/736x/97/dc/96/97dc9699bc6c850ecd8776eaee3b7898.jpg" alt="Private spa room">
         </div>
@@ -480,9 +702,13 @@
             <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Body Massage">
             <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Body Massage">
           </div>
+
           <div class="service-body">
             <h3>Body Massage</h3>
-            <div class="meta"><span>60 min</span><strong>$50/hr</strong></div>
+            <div class="meta">
+              <span>60 min</span>
+              <strong>$50/hr</strong>
+            </div>
             <p>A full-body relaxation session for tired muscles, shoulder and back tension, and anyone who wants to feel lighter after a long day.</p>
           </div>
         </article>
@@ -493,9 +719,13 @@
             <img src="https://i.pinimg.com/736x/35/ec/94/35ec9439b5f2d96e9224dc970c8d5b25.jpg" alt="Head Care Treatment">
             <img src="https://i.pinimg.com/736x/6f/47/8d/6f478d023a322a9ce9144f70634c12e7.jpg" alt="Head Care Treatment">
           </div>
+
           <div class="service-body">
             <h3>Head Care Treatment</h3>
-            <div class="meta"><span>60 min</span><strong>$60/hr</strong></div>
+            <div class="meta">
+              <span>60 min</span>
+              <strong>$60/hr</strong>
+            </div>
             <p>Focused care for the scalp, temples, neck, and head area. Ideal for screen fatigue, mental tension, and guests seeking a quiet reset.</p>
           </div>
         </article>
@@ -507,9 +737,13 @@
             <img src="https://i.pinimg.com/736x/0f/3f/81/0f3f81099646be92e09f407f05d08bc6.jpg" alt="Meridian Therapy">
             <img src="https://i.pinimg.com/736x/84/49/34/8449344cd345219c0589f13697c49423.jpg" alt="Meridian Therapy">
           </div>
+
           <div class="service-body">
             <h3>Meridian Therapy</h3>
-            <div class="meta"><span>60 min</span><strong>$70/hr</strong></div>
+            <div class="meta">
+              <span>60 min</span>
+              <strong>$70/hr</strong>
+            </div>
             <p>A focused therapeutic session inspired by pressure-point and meridian concepts. Great for guests who prefer structured, targeted bodywork.</p>
           </div>
         </article>
@@ -519,9 +753,13 @@
             <img class="active" src="https://i.pinimg.com/736x/20/6f/42/206f42e3236dde0cff469282af0d7ba8.jpg" alt="Stress Relief Therapy">
             <img src="https://i.pinimg.com/736x/85/17/e3/8517e37cee917532c8369726978f98e2.jpg" alt="Stress Relief Therapy">
           </div>
+
           <div class="service-body">
             <h3>Stress Relief Therapy</h3>
-            <div class="meta"><span>60 min</span><strong>$80/hr</strong></div>
+            <div class="meta">
+              <span>60 min</span>
+              <strong>$80/hr</strong>
+            </div>
             <p>A calming session for guests carrying daily stress, restlessness, or overall fatigue. Designed to help the body slow down and unwind.</p>
           </div>
         </article>
@@ -529,17 +767,33 @@
 
       <div class="packages">
         <h3>3-Session Packages</h3>
-        <div class="package-row"><span>3 sessions × 30 minutes</span><strong>$100</strong></div>
-        <div class="package-row"><span>3 sessions × 60 minutes</span><strong>$199</strong></div>
-        <div class="package-row"><span>3 sessions × 90 minutes</span><strong>$298</strong></div>
+        <div class="package-row">
+          <span>3 sessions × 30 minutes</span>
+          <strong>$100</strong>
+        </div>
+        <div class="package-row">
+          <span>3 sessions × 60 minutes</span>
+          <strong>$199</strong>
+        </div>
+        <div class="package-row">
+          <span>3 sessions × 90 minutes</span>
+          <strong>$298</strong>
+        </div>
       </div>
     </section>
 
     <section class="booking" id="booking">
       <h2>Ready to book your visit?</h2>
-      <p>Call THERAPYSPA to schedule your preferred service time. Walk away feeling calmer, lighter, and deeply refreshed.</p>
+      <p>Schedule your preferred time online with THERAPYSPA. Choose a service and reserve your appointment in just a few steps.</p>
+
       <div class="booking-actions">
-        <a class="btn" href="tel:+12033081200">Call (203)-308-1200</a>
+        <button
+          class="anywhere-book-now-button setmore-book-btn"
+          data-booking-url="https://therapyspa.setmore.com"
+          data-new-tab="false">
+          Book now
+        </button>
+
         <a class="btn secondary" href="#contact">View Location</a>
       </div>
     </section>
@@ -551,31 +805,127 @@
       </div>
 
       <div class="review-row left">
-        <div class="review"><div class="stars">★★★★★</div><p>“The room was quiet, clean, and very relaxing. I left feeling like I could finally breathe again.”</p><strong>— Amanda R.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Great pressure and a peaceful atmosphere. The Body Massage was exactly what I needed after work.”</p><strong>— Michael T.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The Head Care Treatment helped me feel calm and refreshed. The whole place feels private and comfortable.”</p><strong>— Jessica L.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“I appreciate how simple and relaxing the visit was. No rush, no noise, just a very soothing experience.”</p><strong>— Daniel W.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Beautiful energy, clean rooms, and a very professional feeling from start to finish.”</p><strong>— Priya S.</strong></div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The room was quiet, clean, and very relaxing. I left feeling like I could finally breathe again.”</p>
+          <strong>— Amanda R.</strong>
+        </div>
 
-        <div class="review"><div class="stars">★★★★★</div><p>“The room was quiet, clean, and very relaxing. I left feeling like I could finally breathe again.”</p><strong>— Amanda R.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Great pressure and a peaceful atmosphere. The Body Massage was exactly what I needed after work.”</p><strong>— Michael T.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The Head Care Treatment helped me feel calm and refreshed. The whole place feels private and comfortable.”</p><strong>— Jessica L.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“I appreciate how simple and relaxing the visit was. No rush, no noise, just a very soothing experience.”</p><strong>— Daniel W.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Beautiful energy, clean rooms, and a very professional feeling from start to finish.”</p><strong>— Priya S.</strong></div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Great pressure and a peaceful atmosphere. The Body Massage was exactly what I needed after work.”</p>
+          <strong>— Michael T.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The Head Care Treatment helped me feel calm and refreshed. The whole place feels private and comfortable.”</p>
+          <strong>— Jessica L.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“I appreciate how simple and relaxing the visit was. No rush, no noise, just a very soothing experience.”</p>
+          <strong>— Daniel W.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Beautiful energy, clean rooms, and a very professional feeling from start to finish.”</p>
+          <strong>— Priya S.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The room was quiet, clean, and very relaxing. I left feeling like I could finally breathe again.”</p>
+          <strong>— Amanda R.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Great pressure and a peaceful atmosphere. The Body Massage was exactly what I needed after work.”</p>
+          <strong>— Michael T.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The Head Care Treatment helped me feel calm and refreshed. The whole place feels private and comfortable.”</p>
+          <strong>— Jessica L.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“I appreciate how simple and relaxing the visit was. No rush, no noise, just a very soothing experience.”</p>
+          <strong>— Daniel W.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Beautiful energy, clean rooms, and a very professional feeling from start to finish.”</p>
+          <strong>— Priya S.</strong>
+        </div>
       </div>
 
       <div class="review-row right">
-        <div class="review"><div class="stars">★★★★★</div><p>“I booked Stress Relief Therapy and felt completely relaxed by the end. I will definitely come back.”</p><strong>— Kevin M.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“THERAPYSPA is peaceful and easy to get to. The service felt thoughtful and very calming.”</p><strong>— Rachel K.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The Meridian Therapy was focused and restorative. I liked that the session felt customized to tension areas.”</p><strong>— Olivia H.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Very clean space, warm lighting, and a calm mood. It felt like a real break from the day.”</p><strong>— Brian C.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The package pricing is a great value. I bought sessions because I know I’ll be returning.”</p><strong>— Sophia N.</strong></div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“I booked Stress Relief Therapy and felt completely relaxed by the end. I will definitely come back.”</p>
+          <strong>— Kevin M.</strong>
+        </div>
 
-        <div class="review"><div class="stars">★★★★★</div><p>“I booked Stress Relief Therapy and felt completely relaxed by the end. I will definitely come back.”</p><strong>— Kevin M.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“THERAPYSPA is peaceful and easy to get to. The service felt thoughtful and very calming.”</p><strong>— Rachel K.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The Meridian Therapy was focused and restorative. I liked that the session felt customized to tension areas.”</p><strong>— Olivia H.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Very clean space, warm lighting, and a calm mood. It felt like a real break from the day.”</p><strong>— Brian C.</strong></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“The package pricing is a great value. I bought sessions because I know I’ll be returning.”</p><strong>— Sophia N.</strong></div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“THERAPYSPA is peaceful and easy to get to. The service felt thoughtful and very calming.”</p>
+          <strong>— Rachel K.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The Meridian Therapy was focused and restorative. I liked that the session felt customized to tension areas.”</p>
+          <strong>— Olivia H.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Very clean space, warm lighting, and a calm mood. It felt like a real break from the day.”</p>
+          <strong>— Brian C.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The package pricing is a great value. I bought sessions because I know I’ll be returning.”</p>
+          <strong>— Sophia N.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“I booked Stress Relief Therapy and felt completely relaxed by the end. I will definitely come back.”</p>
+          <strong>— Kevin M.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“THERAPYSPA is peaceful and easy to get to. The service felt thoughtful and very calming.”</p>
+          <strong>— Rachel K.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The Meridian Therapy was focused and restorative. I liked that the session felt customized to tension areas.”</p>
+          <strong>— Olivia H.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Very clean space, warm lighting, and a calm mood. It felt like a real break from the day.”</p>
+          <strong>— Brian C.</strong>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“The package pricing is a great value. I bought sessions because I know I’ll be returning.”</p>
+          <strong>— Sophia N.</strong>
+        </div>
       </div>
     </section>
 
@@ -590,14 +940,17 @@
           <summary>How early should I arrive?</summary>
           <p>Please arrive 10 minutes early so you have time to check in, relax, and prepare for your session.</p>
         </details>
+
         <details>
           <summary>Can I get a massage if I have an injury?</summary>
           <p>Please call ahead before booking if you have a recent injury, medical concern, or sensitive area. For serious conditions, consult your healthcare provider first.</p>
         </details>
+
         <details>
           <summary>What is your cancellation policy?</summary>
           <p>Please call as early as possible if you need to change or cancel your appointment so the time can be offered to another guest.</p>
         </details>
+
         <details>
           <summary>Is there parking available?</summary>
           <p>Parking availability may vary nearby. Please call before your visit if you need parking guidance.</p>
@@ -609,19 +962,31 @@
       <div class="section-head">
         <span>Contact & Location</span>
         <h2>Visit THERAPYSPA</h2>
-        <p>Find us in Shelton, Connecticut. Call to book your next session.</p>
+        <p>Find us in Shelton, Connecticut. Book online or call for assistance.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
           <div class="contact-item">
+            <span>Online Booking</span>
+            <button
+              class="anywhere-book-now-button setmore-book-btn"
+              data-booking-url="https://therapyspa.setmore.com"
+              data-new-tab="false">
+              Book now
+            </button>
+          </div>
+
+          <div class="contact-item">
             <span>Phone</span>
             <a href="tel:+12033081200">(203)-308-1200</a>
           </div>
+
           <div class="contact-item">
             <span>Address</span>
             <p>549 HOWE AVE.<br>SHELTON, CT 06484</p>
           </div>
+
           <div class="contact-item">
             <span>Hours</span>
             <p>Mon.-Sat: 10AM-10PM<br>Sunday: 10AM-6PM</p>
