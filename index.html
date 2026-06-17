@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>THERAP YSPA | Therapeutic Massage & Head Therapy in Shelton, CT</title>
+  <title>THERAP YSPA | Therapeutic Massage & TCM Wellness in Shelton, CT</title>
   <meta
     name="description"
-    content="THERAP YSPA is a professional therapeutic massage and head therapy spa in Shelton, CT, offering Therapeutic Body Massage, Head Care Treatment, Meridian Therapy, and Stress Relief Therapy."
+    content="THERAP YSPA is a professional wellness center in Shelton, CT, combining Traditional Chinese Medicine therapies with modern wellness management, including meridian therapy, cupping, massage, gua sha, moxibustion, detox wellness, and stress relief care."
   />
 
   <script
@@ -157,45 +157,16 @@
       text-align:center;
       color:white;
       overflow:hidden;
-    }
-
-    .hero-slide{
-      position:absolute;
-      inset:0;
-      opacity:0;
-      animation:heroFade 28s infinite;
-    }
-
-    .hero-slide:nth-child(1){animation-delay:0s;}
-    .hero-slide:nth-child(2){animation-delay:7s;}
-    .hero-slide:nth-child(3){animation-delay:14s;}
-    .hero-slide:nth-child(4){animation-delay:21s;}
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
       background:
-        linear-gradient(90deg,rgba(20,12,8,.76),rgba(20,12,8,.38)),
-        radial-gradient(circle at center,rgba(255,255,255,.06),rgba(0,0,0,.52));
-      z-index:1;
-    }
-
-    @keyframes heroFade{
-      0%,23%{
-        opacity:1;
-        transform:scale(1.02);
-      }
-      29%,100%{
-        opacity:0;
-        transform:scale(1.08);
-      }
+        linear-gradient(90deg,rgba(20,12,8,.78),rgba(20,12,8,.42)),
+        radial-gradient(circle at center,rgba(255,255,255,.06),rgba(0,0,0,.52)),
+        url("bg.png") center/cover no-repeat;
     }
 
     .hero-content{
       position:relative;
       z-index:2;
-      width:min(980px,90%);
+      width:min(1100px,90%);
       padding-top:82px;
     }
 
@@ -215,11 +186,29 @@
       margin-bottom:24px;
     }
 
-    .hero p{
-      max-width:800px;
+    .hero-intro{
+      max-width:960px;
       margin:0 auto 34px;
       color:rgba(255,255,255,.9);
-      font-size:clamp(1.05rem,2vw,1.32rem);
+      font-size:clamp(1rem,1.55vw,1.18rem);
+      text-align:left;
+      background:rgba(32,21,16,.34);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:24px;
+      padding:26px;
+      backdrop-filter:blur(8px);
+    }
+
+    .hero-intro p{
+      margin-bottom:14px;
+    }
+
+    .hero-intro p:last-child{
+      margin-bottom:0;
+    }
+
+    .hero-intro strong{
+      color:#f7d8ae;
     }
 
     .hero-actions{
@@ -795,6 +784,15 @@
         font-size:clamp(2.8rem,14vw,4.6rem);
       }
 
+      .hero-content{
+        width:92%;
+      }
+
+      .hero-intro{
+        padding:20px;
+        font-size:.96rem;
+      }
+
       .hero-badges{
         display:none;
       }
@@ -846,30 +844,47 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-slide">
-        <img src="https://i.pinimg.com/736x/6f/f7/53/6ff7537eb07c5e0b5c255b6266388028.jpg" alt="Therapeutic head therapy and scalp care">
-      </div>
-
-      <div class="hero-slide">
-        <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Therapeutic body massage spa room">
-      </div>
-
-      <div class="hero-slide">
-        <img src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg" alt="Calming head and scalp massage">
-      </div>
-
-      <div class="hero-slide">
-        <img src="https://i.pinimg.com/736x/20/6f/42/206f42e3236dde0cff469282af0d7ba8.jpg" alt="Stress relief therapeutic massage">
-      </div>
-
       <div class="hero-content">
-        <div class="eyebrow">Therapeutic Massage · Head Therapy · Scalp Care</div>
-        <h1>Feel better from head to body.</h1>
-        <p>
-          THERAP YSPA focuses on therapeutic massage and detailed head therapy designed to ease daily tension,
-          refresh the scalp, relax the neck and shoulders, and help the whole body return to a calmer, lighter,
-          more comfortable state.
-        </p>
+        <div class="eyebrow">Traditional Chinese Medicine · Modern Wellness · Preventive Care</div>
+
+        <h1>Balance the body. Calm the mind.</h1>
+
+        <div class="hero-intro">
+          <p>
+            We are a professional wellness center dedicated to combining Traditional Chinese Medicine (TCM)
+            therapies with modern health management concepts. Our core services include meridian therapy,
+            cupping therapy, and a variety of traditional TCM wellness and conditioning treatments. We mainly
+            serve people in a “sub-health” state, meaning those experiencing physical or mental imbalance.
+            With professional techniques and a peaceful, comfortable environment, we meet our clients’
+            evolving needs for health, wellness, and restorative care.
+          </p>
+
+          <p>
+            <strong>Service Positioning:</strong>
+            We are a distinctive wellness institution that thoughtfully blends the TCM philosophy of
+            “preventive treatment before illness” with professional conditioning techniques, aiming to provide
+            a comprehensive experience of physical relaxation, mental relief, and overall well-being.
+          </p>
+
+          <p>
+            <strong>Business Philosophy:</strong>
+            We integrate the wisdom of traditional culture with modern conditioning techniques, supported by
+            attentive service rooted in genuine care.
+          </p>
+
+          <p>
+            <strong>Target Clients:</strong>
+            Working professionals seeking relief from sub-health concerns; individuals who value body
+            maintenance and self-care; and middle-aged and senior clients who view body conditioning as a
+            foundation for long-term wellness.
+          </p>
+
+          <p>
+            <strong>TCM Services:</strong>
+            Tui Na massage, gua sha and cupping, moxibustion, and detox wellness therapies.
+            Additional benefits include stress management, improved sleep quality, and immune support.
+          </p>
+        </div>
 
         <div class="hero-actions">
           <button
@@ -883,10 +898,11 @@
         </div>
 
         <div class="hero-badges">
-          <span>Therapeutic Massage</span>
-          <span>Head Therapy</span>
-          <span>Scalp Refresh</span>
-          <span>Neck & Shoulder Relief</span>
+          <span>Meridian Therapy</span>
+          <span>Cupping Therapy</span>
+          <span>Gua Sha</span>
+          <span>Moxibustion</span>
+          <span>Detox Wellness</span>
         </div>
       </div>
     </section>
@@ -1429,7 +1445,7 @@
   </main>
 
   <footer>
-    © 2026 THERAP YSPA · Therapeutic Massage & Head Therapy · 549 HOWE AVE. SHELTON, CT 06484 · (203)-308-1200
+    © 2026 THERAP YSPA · Therapeutic Massage & TCM Wellness · 549 HOWE AVE. SHELTON, CT 06484 · (203)-308-1200
   </footer>
 
   <script>
