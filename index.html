@@ -174,6 +174,7 @@
       font-size:.82rem;
       font-weight:800;
       margin-bottom:18px;
+      text-shadow:0 2px 10px rgba(0,0,0,.45);
     }
 
     .hero h1{
@@ -181,12 +182,13 @@
       font-size:clamp(3rem,8vw,7.15rem);
       line-height:.94;
       margin-bottom:24px;
+      text-shadow:0 3px 18px rgba(0,0,0,.45);
     }
 
     .hero-intro{
       max-width:960px;
       margin:0 auto 34px;
-      color:rgba(255,255,255,.9);
+      color:rgba(255,255,255,.94);
       font-size:clamp(1rem,1.55vw,1.18rem);
       text-align:left;
       background:rgba(32,21,16,.34);
@@ -229,8 +231,9 @@
       border-radius:999px;
       background:rgba(255,255,255,.13);
       border:1px solid rgba(255,255,255,.18);
-      color:rgba(255,255,255,.9);
+      color:rgba(255,255,255,.94);
       font-size:.9rem;
+      text-shadow:0 2px 8px rgba(0,0,0,.35);
     }
 
     section{
@@ -359,6 +362,35 @@
       background:linear-gradient(180deg,var(--cream),#fffaf4);
     }
 
+    .coupon-alert{
+      max-width:1000px;
+      margin:-18px auto 46px;
+      background:linear-gradient(135deg,#2a1a12,#5c4434);
+      color:white;
+      border-radius:var(--radius);
+      padding:28px 32px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.12);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    .coupon-alert strong{
+      font-family:Georgia, serif;
+      color:#f7d8ae;
+      font-size:2rem;
+      line-height:1.1;
+    }
+
+    .coupon-alert span{
+      font-size:1.08rem;
+      color:rgba(255,255,255,.88);
+      font-weight:700;
+    }
+
     .service-grid{
       max-width:1200px;
       margin:auto;
@@ -378,7 +410,7 @@
     }
 
     .service-carousel{
-      height:255px;
+      height:235px;
       position:relative;
       overflow:hidden;
       background:#d8c2a3;
@@ -420,6 +452,11 @@
       margin-bottom:16px;
       color:var(--gold);
       font-weight:900;
+    }
+
+    .meta strong{
+      white-space:nowrap;
+      font-size:1.12rem;
     }
 
     .service-body p{
@@ -509,43 +546,6 @@
     .wellness-note p{
       color:#6b5b50;
       margin-top:10px;
-    }
-
-    .packages{
-      max-width:930px;
-      margin:42px auto 0;
-      background:var(--dark);
-      color:white;
-      border-radius:var(--radius);
-      padding:34px;
-      box-shadow:var(--shadow);
-    }
-
-    .packages h3{
-      font-family:Georgia, serif;
-      font-size:2rem;
-      color:#f7d8ae;
-      margin-bottom:18px;
-    }
-
-    .package-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:18px 0;
-      border-bottom:1px solid rgba(255,255,255,.14);
-      font-size:1.1rem;
-    }
-
-    .package-row:last-child{
-      border-bottom:none;
-    }
-
-    .package-row strong{
-      color:#f7d8ae;
-      font-size:1.45rem;
-      white-space:nowrap;
     }
 
     .booking{
@@ -794,6 +794,15 @@
         display:none;
       }
 
+      .coupon-alert{
+        margin:-10px auto 36px;
+        padding:24px;
+      }
+
+      .coupon-alert strong{
+        font-size:1.65rem;
+      }
+
       .service-grid,
       .focus-grid{
         grid-template-columns:1fr;
@@ -801,14 +810,6 @@
 
       .review{
         width:310px;
-      }
-
-      .package-row{
-        font-size:1rem;
-      }
-
-      .package-row strong{
-        font-size:1.25rem;
       }
 
       iframe{
@@ -907,42 +908,41 @@
     <section class="about" id="about">
       <div class="section-head">
         <span>About Us</span>
-        <h2>Therapeutic massage and head therapy in a calm, private space</h2>
+        <h2>TCM-inspired body care in a calm, private space</h2>
         <p>
-          Our main focus is treatment-style wellness care for guests who want more than a simple relaxing massage.
-          We combine body massage, head care, scalp comfort, and stress relief in a clean and peaceful setting.
+          We combine traditional wellness techniques with modern comfort, creating restorative care for people who feel tense,
+          tired, stressed, or physically out of balance.
         </p>
       </div>
 
       <div class="about-grid">
         <div class="about-card">
-          <h3>Focused care for tension, fatigue, scalp comfort, and daily stress</h3>
+          <h3>Focused care for tension, fatigue, stress, and body balance</h3>
 
           <p>
-            THERAP YSPA is a professional wellness spa centered around therapeutic massage and Asian-inspired head therapy.
-            Our sessions are designed for people who carry tension from work, long sitting hours, poor sleep, emotional stress,
-            travel, physical fatigue, or daily body discomfort.
+            THERAP YSPA is a professional wellness spa centered around therapeutic bodywork and TCM-inspired care.
+            Our sessions are designed for people who carry tension from work, long sitting hours, poor sleep,
+            emotional stress, travel, physical fatigue, or daily body discomfort.
           </p>
 
           <br />
 
           <p>
-            Therapeutic massage helps the body slow down, soften tight muscles, improve comfort, and support a better sense of
-            physical balance. With steady pressure, careful rhythm, and focused bodywork, the session can help guests feel less stiff,
-            more relaxed, and more connected to their body.
+            Our services include massage, cupping therapy, head care, foot massage, deep muscle care, muscle recovery,
+            hot compress, and hot stone support. Each treatment is designed to help the body slow down, soften tight areas,
+            and return to a more comfortable state.
           </p>
 
           <br />
 
           <p>
-            Head therapy focuses on the scalp, temples, neck, and shoulder area. It is especially helpful for guests who experience
-            scalp buildup, head heaviness, dry or oily scalp discomfort, screen-related tension, mental fatigue, or stress that settles
-            around the head and neck.
+            We focus on clean rooms, steady technique, attentive service, and a peaceful atmosphere so every visit feels
+            private, comfortable, and restorative.
           </p>
 
           <div class="about-points">
-            <div>Therapeutic body massage for muscle tension and fatigue</div>
-            <div>Head therapy for scalp freshness, head comfort, and deep relaxation</div>
+            <div>TCM-inspired care for daily tension and sub-health concerns</div>
+            <div>Massage, cupping, head care, foot care, and muscle recovery services</div>
             <div>Private treatment rooms with a quiet, soothing wellness atmosphere</div>
           </div>
         </div>
@@ -956,30 +956,30 @@
     <section class="focus-strip">
       <div class="focus-grid">
         <div class="focus-item">
-          <strong>Therapeutic Massage</strong>
+          <strong>Chair Massage</strong>
           <p>
-            Designed to ease muscle tightness, reduce everyday body tension, support relaxation, and help guests feel more comfortable.
+            A quick and convenient session for neck, shoulder, back, and daily tension relief.
           </p>
         </div>
 
         <div class="focus-item">
-          <strong>Head Therapy</strong>
+          <strong>Cupping Therapy</strong>
           <p>
-            Focused care for the scalp, temples, neck, and shoulders to refresh the head area and release built-up pressure.
+            Traditional cupping care designed to support body comfort and release the feeling of built-up tension.
           </p>
         </div>
 
         <div class="focus-item">
-          <strong>Scalp Wellness</strong>
+          <strong>Foot Massage</strong>
           <p>
-            Helps remove the feeling of scalp buildup, supports a cleaner scalp sensation, and promotes a lighter, fresher feeling.
+            Acupressure-inspired foot care for tired feet, lower-body fatigue, and whole-body relaxation.
           </p>
         </div>
 
         <div class="focus-item">
-          <strong>Stress Relief</strong>
+          <strong>Muscle Recovery</strong>
           <p>
-            A calming reset for guests who feel mentally tired, physically tense, emotionally overloaded, or unable to fully relax.
+            Focused bodywork for deep tension, physical fatigue, and post-work recovery needs.
           </p>
         </div>
       </div>
@@ -988,44 +988,96 @@
     <section class="services" id="services">
       <div class="section-head">
         <span>Services & Pricing</span>
-        <h2>Therapeutic massage, head therapy, and stress relief care</h2>
+        <h2>Updated wellness service menu</h2>
         <p>
-          Choose the session that fits your body’s needs today. Each service is designed to support comfort, relaxation,
-          and a refreshed feeling from head to body.
+          Choose the session that fits your body’s needs today. Our menu includes quick massage, full-body massage,
+          head care, cupping, foot massage, deep muscle care, and hot compress or hot stone support.
         </p>
+      </div>
+
+      <div class="coupon-alert">
+        <strong>Special Benefit</strong>
+        <span>Visit us in store and receive a free $100 coupon.</span>
       </div>
 
       <div class="service-grid">
         <article class="service-card">
           <div class="service-carousel">
-            <img class="active" src="https://i.pinimg.com/1200x/c1/74/81/c174811a5ad813c2e5d32a53d09d27bd.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/1200x/8b/4f/4c/8b4f4c1bf4e63e70cbd8427d7624f39e.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/736x/0e/ac/a3/0eaca37d42962320258433ea726325d4.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/736x/80/ff/22/80ff2207e242a9e5d4bcc866fb8185ab.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/1200x/1d/7a/35/1d7a35d9acfeca6458ad0faec726d081.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/736x/4e/91/c8/4e91c8fdc87b075c513a8ba6aaa08426.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/736x/d1/f3/6c/d1f36c5855ccca000b32ac1e41acc64e.jpg" alt="Therapeutic Body Massage">
-            <img src="https://i.pinimg.com/1200x/e6/76/e0/e676e077d43630549f03f51921d3eefd.jpg" alt="Therapeutic Body Massage">
+            <img class="active" src="https://i.pinimg.com/736x/20/6f/42/206f42e3236dde0cff469282af0d7ba8.jpg" alt="Chair Massage">
+            <img src="https://i.pinimg.com/1200x/8b/4f/4c/8b4f4c1bf4e63e70cbd8427d7624f39e.jpg" alt="Chair Massage">
           </div>
 
           <div class="service-body">
-            <h3>Therapeutic Body Massage</h3>
+            <h3>Chair Massage</h3>
 
             <div class="meta">
-              <span>60 min</span>
-              <strong>$50/hr</strong>
+              <span>15 min</span>
+              <strong>$20</strong>
             </div>
 
             <p>
-              A treatment-focused body massage designed to ease everyday muscle tightness, improve your sense of body comfort,
-              and help release tension caused by work, stress, standing, sitting, driving, or travel. This session is ideal for guests
-              who want deeper relaxation, improved mobility comfort, and a lighter feeling throughout the body.
+              A fast, convenient massage option for guests who want quick relief for the neck, shoulders, upper back,
+              and everyday tension without committing to a full session.
             </p>
 
             <div class="service-tags">
-              <span>Muscle Tension</span>
+              <span>Quick Relief</span>
+              <span>Neck & Shoulders</span>
+              <span>Upper Back</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-carousel">
+            <img class="active" src="https://i.pinimg.com/1200x/c1/74/81/c174811a5ad813c2e5d32a53d09d27bd.jpg" alt="Sweet Massage">
+            <img src="https://i.pinimg.com/736x/0e/ac/a3/0eaca37d42962320258433ea726325d4.jpg" alt="Sweet Massage">
+          </div>
+
+          <div class="service-body">
+            <h3>Sweet Massage</h3>
+
+            <div class="meta">
+              <span>30 min</span>
+              <strong>$30</strong>
+            </div>
+
+            <p>
+              A gentle relaxation massage designed to help the body slow down, soften everyday tightness,
+              and create a calm, comfortable feeling in a shorter treatment time.
+            </p>
+
+            <div class="service-tags">
+              <span>Gentle Care</span>
+              <span>Relaxation</span>
+              <span>Daily Stress</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-carousel">
+            <img class="active" src="https://i.pinimg.com/736x/ab/2a/c5/ab2ac55604d9e7f6536330af22ebafc4.jpg" alt="Cupping Therapy">
+            <img src="https://i.pinimg.com/736x/a8/a0/34/a8a03423085e0616f2dd8fe612d149d0.jpg" alt="Cupping Therapy">
+          </div>
+
+          <div class="service-body">
+            <h3>Cupping Therapy</h3>
+
+            <div class="meta">
+              <span>Session</span>
+              <strong>$10</strong>
+            </div>
+
+            <p>
+              Traditional cupping therapy for guests seeking TCM-inspired body care. It is often chosen to support comfort,
+              relieve the feeling of blocked tension, and refresh tired areas.
+            </p>
+
+            <div class="service-tags">
+              <span>TCM Care</span>
               <span>Body Comfort</span>
-              <span>Fatigue Relief</span>
+              <span>Tension Relief</span>
             </div>
           </div>
         </article>
@@ -1038,7 +1090,7 @@
           </div>
 
           <div class="service-body">
-            <h3>Head Therapy Treatment</h3>
+            <h3>Head Care Treatment</h3>
 
             <div class="meta">
               <span>60 min</span>
@@ -1046,14 +1098,12 @@
             </div>
 
             <p>
-              Our signature head therapy focuses on the scalp, temples, forehead, neck, and shoulder area. It helps refresh the scalp,
-              relax head pressure, reduce the feeling of heaviness, and create a deeply calming experience. This treatment is especially
-              suitable for guests with scalp buildup, dry or oily scalp concerns, screen fatigue, poor sleep, or tension around the head,
-              neck, and shoulders.
+              A detailed head care treatment focusing on the scalp, temples, forehead, neck, and shoulder area.
+              It is suitable for head heaviness, screen fatigue, poor sleep, stress, and scalp comfort needs.
             </p>
 
             <div class="service-tags">
-              <span>Scalp Freshness</span>
+              <span>Scalp Care</span>
               <span>Head Relaxation</span>
               <span>Neck Comfort</span>
             </div>
@@ -1062,42 +1112,39 @@
 
         <article class="service-card">
           <div class="service-carousel">
-            <img class="active" src="https://i.pinimg.com/736x/ab/2a/c5/ab2ac55604d9e7f6536330af22ebafc4.jpg" alt="Meridian Therapy">
-            <img src="https://i.pinimg.com/736x/a8/a0/34/a8a03423085e0616f2dd8fe612d149d0.jpg" alt="Meridian Therapy">
-            <img src="https://i.pinimg.com/736x/0f/3f/81/0f3f81099646be92e09f407f05d08bc6.jpg" alt="Meridian Therapy">
-            <img src="https://i.pinimg.com/736x/84/49/34/8449344cd345219c0589f13697c49423.jpg" alt="Meridian Therapy">
+            <img class="active" src="https://i.pinimg.com/736x/84/49/34/8449344cd345219c0589f13697c49423.jpg" alt="Acupressure Foot Massage">
+            <img src="https://i.pinimg.com/736x/0f/3f/81/0f3f81099646be92e09f407f05d08bc6.jpg" alt="Acupressure Foot Massage">
           </div>
 
           <div class="service-body">
-            <h3>Meridian Therapy</h3>
+            <h3>Acupressure Foot Massage</h3>
 
             <div class="meta">
               <span>60 min</span>
-              <strong>$70/hr</strong>
+              <strong>$50/hr</strong>
             </div>
 
             <p>
-              A focused wellness session inspired by traditional Asian meridian care. This service uses targeted pressure and careful
-              bodywork to help guests feel more balanced, relaxed, and refreshed. It is a good choice for guests who want more specific
-              attention to body pathways, stiffness, tension points, and the feeling of blocked or heavy energy.
+              Foot massage with acupressure-inspired techniques for tired feet, standing fatigue, lower-body tension,
+              and guests who want a relaxing reset from the feet upward.
             </p>
 
             <div class="service-tags">
-              <span>Targeted Care</span>
-              <span>Asian-Inspired</span>
-              <span>Body Balance</span>
+              <span>Foot Care</span>
+              <span>Acupressure</span>
+              <span>Fatigue Relief</span>
             </div>
           </div>
         </article>
 
         <article class="service-card">
           <div class="service-carousel">
-            <img class="active" src="https://i.pinimg.com/736x/20/6f/42/206f42e3236dde0cff469282af0d7ba8.jpg" alt="Stress Relief Therapy">
-            <img src="https://i.pinimg.com/736x/85/17/e3/8517e37cee917532c8369726978f98e2.jpg" alt="Stress Relief Therapy">
+            <img class="active" src="https://i.pinimg.com/1200x/1d/7a/35/1d7a35d9acfeca6458ad0faec726d081.jpg" alt="Korean Deep Muscle Massage">
+            <img src="https://i.pinimg.com/736x/4e/91/c8/4e91c8fdc87b075c513a8ba6aaa08426.jpg" alt="Korean Deep Muscle Massage">
           </div>
 
           <div class="service-body">
-            <h3>Stress Relief Therapy</h3>
+            <h3>Korean Deep Muscle Massage</h3>
 
             <div class="meta">
               <span>60 min</span>
@@ -1105,15 +1152,68 @@
             </div>
 
             <p>
-              A premium calming therapy for guests carrying stress, fatigue, head tension, emotional overload, or poor sleep quality.
-              This session is designed to help the nervous system slow down, soften the body, relax the head and neck, and guide you
-              back into a quieter, steadier, more peaceful state.
+              A deeper bodywork session for guests with stronger muscle tension, physical fatigue, and areas that need
+              more focused pressure and recovery-oriented care.
             </p>
 
             <div class="service-tags">
-              <span>Deep Calm</span>
-              <span>Sleep Support</span>
-              <span>Mind-Body Reset</span>
+              <span>Deep Pressure</span>
+              <span>Muscle Tension</span>
+              <span>Recovery Care</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-carousel">
+            <img class="active" src="https://i.pinimg.com/736x/d1/f3/6c/d1f36c5855ccca000b32ac1e41acc64e.jpg" alt="Muscle Recovery Massage">
+            <img src="https://i.pinimg.com/1200x/e6/76/e0/e676e077d43630549f03f51921d3eefd.jpg" alt="Muscle Recovery Massage">
+          </div>
+
+          <div class="service-body">
+            <h3>Muscle Recovery Massage</h3>
+
+            <div class="meta">
+              <span>60 min</span>
+              <strong>$70/hr</strong>
+            </div>
+
+            <p>
+              A recovery-focused massage for guests who feel sore, stiff, overworked, or physically drained.
+              This session helps support relaxation, body comfort, and a lighter post-treatment feeling.
+            </p>
+
+            <div class="service-tags">
+              <span>Recovery</span>
+              <span>Body Comfort</span>
+              <span>Fatigue Care</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-carousel">
+            <img class="active" src="https://i.pinimg.com/736x/85/17/e3/8517e37cee917532c8369726978f98e2.jpg" alt="Hot Compress and Hot Stone">
+            <img src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg" alt="Hot Compress and Hot Stone">
+          </div>
+
+          <div class="service-body">
+            <h3>Hot Compress / Hot Stone</h3>
+
+            <div class="meta">
+              <span>Add-on</span>
+              <strong>Ask Staff</strong>
+            </div>
+
+            <p>
+              Warm therapy support for guests who enjoy heat-based relaxation. Hot compress or hot stone care may help
+              soften tight areas and create a deeper sense of comfort during the session.
+            </p>
+
+            <div class="service-tags">
+              <span>Warm Therapy</span>
+              <span>Deep Comfort</span>
+              <span>Add-on Care</span>
             </div>
           </div>
         </article>
@@ -1121,14 +1221,14 @@
 
       <div class="benefits">
         <div class="benefit-card">
-          <h3>Benefits of Therapeutic Massage</h3>
+          <h3>Benefits of Therapeutic Bodywork</h3>
           <p>
-            Therapeutic massage is ideal for guests who want bodywork with purpose. It is not only about relaxation;
-            it focuses on common areas of tightness and fatigue to help the body feel easier, looser, and more comfortable.
+            Therapeutic bodywork is ideal for guests who want care with purpose. It is not only about relaxation;
+            it focuses on common areas of tightness, stress, and fatigue to help the body feel easier and more comfortable.
           </p>
           <p>
-            Regular massage may help reduce everyday muscle tension, support circulation, improve relaxation, ease stress-related
-            tightness, and promote a better sense of rest after busy or physically demanding days.
+            Regular care may help reduce everyday muscle tension, support relaxation, ease stress-related tightness,
+            and promote a better sense of rest after busy or physically demanding days.
           </p>
 
           <div class="benefit-list">
@@ -1140,21 +1240,21 @@
         </div>
 
         <div class="benefit-card">
-          <h3>Benefits of Head Therapy</h3>
+          <h3>Benefits of TCM-Inspired Care</h3>
           <p>
-            Head therapy is a detailed treatment for the scalp, head, neck, and shoulder area. Many guests carry stress in this region,
-            especially after long hours on screens, mental pressure, lack of rest, or daily tension.
+            TCM-inspired services such as cupping, acupressure foot massage, head care, hot compress, and muscle recovery
+            are designed to support the body’s natural need for rest, circulation, comfort, and balance.
           </p>
           <p>
-            Our head therapy experience helps refresh the scalp, relax the temples and forehead, ease the feeling of head heaviness,
-            and create a soothing reset for both the mind and body.
+            These services are especially suitable for people experiencing sub-health concerns, daily stress, poor sleep,
+            body heaviness, fatigue, and tension caused by modern work and lifestyle habits.
           </p>
 
           <div class="benefit-list">
-            <div>Refreshes the scalp and helps reduce the feeling of buildup or heaviness</div>
-            <div>Relaxes the temples, forehead, neck, and shoulder area</div>
-            <div>Helps calm mental fatigue, screen-related tension, and daily stress</div>
-            <div>Creates a deeply peaceful experience that supports rest and relaxation</div>
+            <div>Supports stress management and a calmer body-mind state</div>
+            <div>Helps improve sleep quality through deep relaxation</div>
+            <div>Supports body maintenance, self-care, and long-term wellness habits</div>
+            <div>Offers a comfortable wellness experience for working adults and seniors</div>
           </div>
         </div>
       </div>
@@ -1162,7 +1262,7 @@
       <div class="wellness-note">
         <h3>Wellness-focused care with comfort and safety in mind</h3>
         <p>
-          Many guests visit us for body tension, neck and shoulder tightness, scalp freshness, head heaviness, stress, fatigue,
+          Many guests visit us for body tension, neck and shoulder tightness, head heaviness, stress, fatigue,
           and personal self-care needs. Our services are wellness-focused and are not a substitute for medical diagnosis or medical treatment.
         </p>
         <p>
@@ -1170,32 +1270,13 @@
           please consult a licensed healthcare provider before booking.
         </p>
       </div>
-
-      <div class="packages">
-        <h3>3-Session Packages</h3>
-
-        <div class="package-row">
-          <span>3 sessions × 30 minutes</span>
-          <strong>$100</strong>
-        </div>
-
-        <div class="package-row">
-          <span>3 sessions × 60 minutes</span>
-          <strong>$199</strong>
-        </div>
-
-        <div class="package-row">
-          <span>3 sessions × 90 minutes</span>
-          <strong>$298</strong>
-        </div>
-      </div>
     </section>
 
     <section class="booking" id="booking">
-      <h2>Book your therapeutic massage or head therapy session</h2>
+      <h2>Book your wellness session today</h2>
       <p>
-        Experience focused care designed for muscle tension, scalp freshness, head relaxation, neck and shoulder comfort,
-        stress relief, and full-body restoration. Reserve your preferred time online today.
+        Experience focused care designed for body tension, head relaxation, foot comfort, cupping therapy,
+        muscle recovery, stress relief, and full-body restoration. Visit us in store and receive a free $100 coupon.
       </p>
 
       <div class="booking-actions">
@@ -1214,13 +1295,13 @@
       <div class="section-head">
         <span>Testimonials</span>
         <h2>What guests say</h2>
-        <p>Guest-style reviews written for a professional therapeutic massage and head therapy experience.</p>
+        <p>Guest-style reviews written for a professional wellness and therapeutic bodywork experience.</p>
       </div>
 
       <div class="review-row left">
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The therapeutic massage helped my shoulders and back feel so much lighter. The session felt focused, calm, and professional.”</p>
+          <p>“The massage helped my shoulders and back feel so much lighter. The session felt focused, calm, and professional.”</p>
           <strong>— Amanda R.</strong>
         </div>
 
@@ -1232,13 +1313,13 @@
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The head therapy was amazing. My scalp felt refreshed, and the tension around my temples and neck felt much better.”</p>
+          <p>“The head care treatment was amazing. My scalp felt refreshed, and the tension around my temples and neck felt much better.”</p>
           <strong>— Jessica L.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“I booked Stress Relief Therapy and left feeling calmer, lighter, and less overwhelmed after a long week.”</p>
+          <p>“The cupping therapy and bodywork helped me feel calmer, lighter, and less overwhelmed after a long week.”</p>
           <strong>— Daniel W.</strong>
         </div>
 
@@ -1250,7 +1331,7 @@
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The therapeutic massage helped my shoulders and back feel so much lighter. The session felt focused, calm, and professional.”</p>
+          <p>“The massage helped my shoulders and back feel so much lighter. The session felt focused, calm, and professional.”</p>
           <strong>— Amanda R.</strong>
         </div>
 
@@ -1262,13 +1343,13 @@
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The head therapy was amazing. My scalp felt refreshed, and the tension around my temples and neck felt much better.”</p>
+          <p>“The head care treatment was amazing. My scalp felt refreshed, and the tension around my temples and neck felt much better.”</p>
           <strong>— Jessica L.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“I booked Stress Relief Therapy and left feeling calmer, lighter, and less overwhelmed after a long week.”</p>
+          <p>“The cupping therapy and bodywork helped me feel calmer, lighter, and less overwhelmed after a long week.”</p>
           <strong>— Daniel W.</strong>
         </div>
 
@@ -1282,19 +1363,19 @@
       <div class="review-row right">
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The scalp and head care was exactly what I needed after long hours at work. I felt relaxed and refreshed.”</p>
+          <p>“The foot massage was exactly what I needed after long hours at work. I felt relaxed and refreshed.”</p>
           <strong>— Kevin M.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The Therapeutic Body Massage was soothing and effective. I appreciated the quiet room and professional environment.”</p>
+          <p>“The muscle recovery massage was soothing and effective. I appreciated the quiet room and professional environment.”</p>
           <strong>— Rachel K.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“Meridian Therapy felt focused and restorative. I liked that it was not rushed and felt very intentional.”</p>
+          <p>“The deep muscle massage felt focused and restorative. I liked that it was not rushed and felt very intentional.”</p>
           <strong>— Olivia H.</strong>
         </div>
 
@@ -1306,25 +1387,25 @@
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“I bought the package because the massage and head therapy experience was worth repeating.”</p>
+          <p>“I loved the warm therapy option. The hot compress made the massage feel even more relaxing.”</p>
           <strong>— Sophia N.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The scalp and head care was exactly what I needed after long hours at work. I felt relaxed and refreshed.”</p>
+          <p>“The foot massage was exactly what I needed after long hours at work. I felt relaxed and refreshed.”</p>
           <strong>— Kevin M.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“The Therapeutic Body Massage was soothing and effective. I appreciated the quiet room and professional environment.”</p>
+          <p>“The muscle recovery massage was soothing and effective. I appreciated the quiet room and professional environment.”</p>
           <strong>— Rachel K.</strong>
         </div>
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“Meridian Therapy felt focused and restorative. I liked that it was not rushed and felt very intentional.”</p>
+          <p>“The deep muscle massage felt focused and restorative. I liked that it was not rushed and felt very intentional.”</p>
           <strong>— Olivia H.</strong>
         </div>
 
@@ -1336,7 +1417,7 @@
 
         <div class="review">
           <div class="stars">★★★★★</div>
-          <p>“I bought the package because the massage and head therapy experience was worth repeating.”</p>
+          <p>“I loved the warm therapy option. The hot compress made the massage feel even more relaxing.”</p>
           <strong>— Sophia N.</strong>
         </div>
       </div>
@@ -1352,23 +1433,29 @@
         <details>
           <summary>How early should I arrive?</summary>
           <p>
-            Please arrive 10 minutes early so you have time to check in, relax, and prepare for your therapeutic massage or head therapy session.
+            Please arrive 10 minutes early so you have time to check in, relax, and prepare for your massage or wellness session.
           </p>
         </details>
 
         <details>
-          <summary>What is therapeutic massage good for?</summary>
+          <summary>Can I receive the free $100 coupon online?</summary>
           <p>
-            Therapeutic massage is helpful for everyday muscle tension, body fatigue, stress-related tightness, neck and shoulder discomfort,
-            and the general feeling of stiffness from work, travel, sitting, standing, or physical activity.
+            The $100 coupon benefit is available for guests who visit us in store. Please ask our staff when you arrive.
           </p>
         </details>
 
         <details>
-          <summary>What are the benefits of head therapy?</summary>
+          <summary>What is chair massage good for?</summary>
           <p>
-            Head therapy focuses on the scalp, temples, neck, and shoulders. It can help refresh the scalp, relax head pressure,
-            ease screen-related tension, calm mental fatigue, and create a deeply peaceful relaxation experience.
+            Chair massage is a short session designed for quick relief of neck, shoulder, upper back, and daily work-related tension.
+          </p>
+        </details>
+
+        <details>
+          <summary>What is cupping therapy?</summary>
+          <p>
+            Cupping therapy is a traditional wellness technique often used to support relaxation and help release the feeling of body tension.
+            It is wellness-focused and not a substitute for medical treatment.
           </p>
         </details>
 
@@ -1428,6 +1515,11 @@
           <div class="contact-item">
             <span>Hours</span>
             <p>Mon.-Sat: 10AM-10PM<br>Sunday: 10AM-6PM</p>
+          </div>
+
+          <div class="contact-item">
+            <span>In-Store Benefit</span>
+            <p>Visit us in store and receive a free $100 coupon.</p>
           </div>
         </div>
 
